@@ -286,7 +286,7 @@
     },
 
     normalizeSubject: function(subject) {
-      var pattern = /((Re|Fwd)(\[[\d+]\])?:(\s)?)*([\w]*)/i;
+      var pattern = /((Re|Fwd)(\[[\d+]\])?:(\s)?)*([\w\s]*)/i;
       var match = subject.match(pattern);
       return match ? match[5] : false;
     },

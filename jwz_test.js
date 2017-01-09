@@ -21,6 +21,7 @@ function child(idTable, id, childIndex) {
 // ---- message regex tests ----
 
 var util = mail.helpers;
+it("New Subject").equal(util.normalizeSubject("New Subject"));
 it("Subject").equal(util.normalizeSubject("Subject"));
 it("Subject").equal(util.normalizeSubject("Re:Subject"));
 it("Subject").equal(util.normalizeSubject("RE:Subject"));
@@ -637,4 +638,3 @@ var root = thread.thread(messages);
 it(1).equal(root.children.length);
 it(null).equal(root.message);
 it(3).equal(root.children[0].children.length);
-
